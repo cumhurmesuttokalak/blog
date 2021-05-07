@@ -13,5 +13,15 @@ class User extends Authenticatable
 
     protected $table='users';
     protected $guarded=['id'];
+    protected $fillable=[
+        "name",
+        "surname",
+
+    ];
+
+    function getPost(){
+        return $this->hasMany('App\Models\Post','author_id','id');
+    }
+
 
 }

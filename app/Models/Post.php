@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-
-    protected $table = "posts";
+    protected $table = 'posts';
     protected $guarded = ['id'];
+
+    function getAuthor(){
+        return $this->belongsTo('App\Models\User','author_id','id');
+    }
+
+
 }

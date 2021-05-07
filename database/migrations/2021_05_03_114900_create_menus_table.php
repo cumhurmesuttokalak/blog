@@ -13,7 +13,7 @@ class CreateMenusTable extends Migration
             $table->id();
             $table->unsignedBigInteger('page_id');
             $table->string('title');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->boolean('is_deleted')->default(0);
             $table->timestamps();
 

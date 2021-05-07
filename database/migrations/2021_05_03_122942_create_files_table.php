@@ -11,8 +11,8 @@ class CreateFilesTable extends Migration
     {
         Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->id('content_id');
-            $table->integer('type');
+            $table->unsignedBigInteger('content_id');
+            $table->unsignedBigInteger('type');
             $table->string('path');
             $table->boolean('is_deleted')->default(0);
             $table->timestamps();

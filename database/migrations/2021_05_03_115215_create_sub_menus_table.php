@@ -18,7 +18,7 @@ class CreateSubMenusTable extends Migration
             $table->unsignedBigInteger('menu_id');
             $table->unsignedBigInteger('page_id');
             $table->string('title');
-            $table->unsignedBigInteger('url');
+            $table->unsignedBigInteger('url')->nullable();
             $table->boolean('is_deleted')->default(0);
             $table->timestamps();
         });

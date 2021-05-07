@@ -17,7 +17,7 @@ class CreatePagesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->boolean('is_deleted');
+            $table->boolean('is_deleted')->default(0);
             $table->timestamps();
         });
     }

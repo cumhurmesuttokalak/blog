@@ -3,18 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
     function index(){
-        /*Post::create([
-            'author_id' => 1,
-            'category_id' => 1,
-            'title' => 'Hayvanlar',
-            'content' => 'Hayvanların hepsi insanlar gibi solunum ve boşaltım yapar.',
-            'post_tags' => 'hellö'
-        ]);*/
+    return "giriş";
+    }
 
         // $all_posts = Post::where('is_deleted', 0)->get();
 
@@ -25,6 +22,6 @@ class HomeController extends Controller
 
 
 
-        dd(explode('-', 'selam-ben-bir-gotum'));
+
     }
-}
+
